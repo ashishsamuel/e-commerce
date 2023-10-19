@@ -2,9 +2,7 @@ import React from 'react'
 
 function Cart() {
   return (
-    <div>
-      Cart Component
-    </div>
+    <div style={{marginTop:'200px'}}>Cart</div>
   )
 }
 
