@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 
 function Header() {
     const wishList = useSelector((state)=>state.wishListReducer)
+    const cart = useSelector((state)=>state.cartReducer)
     return (
         <>
             <Navbar expand="lg" fixed='top' className="bg-white mb-5 shadow p-3">
@@ -28,7 +29,7 @@ function Header() {
                             <Nav.Link className='btn border rounded ms-3'>
                                 <Link to={'/cart'} className='d-flex align-item-center' style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold' }}>
                                     <i className='fa-solid fa-cart-shopping text-warning me-2 mt-1'></i>Cart
-                                    <Badge className='ms-2 rounded' bg='light'>10</Badge>
+                                    <Badge className='ms-2 rounded' bg='light'>{cart.length}</Badge>
                                 </Link>
                             </Nav.Link>
                         </Nav>

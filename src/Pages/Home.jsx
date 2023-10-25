@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import useFetch from '../Hooks/useFetch';
 import { useDispatch } from 'react-redux';
 import { addToWishList } from '../redux/slices/wishlistSlice';
+import { addToCart } from '../redux/slices/cartSlice';
 
 
 function Home() {
@@ -27,7 +28,7 @@ function Home() {
 
                            <div className='d-flex align-items-center' style={{justifyContent:'space-between'}}>
                            <Button className='btn btn-light' onClick={()=>dispatch(addToWishList(product))}><i className="fa-solid fa-heart text-danger fa-2x"></i></Button>
-                            <Button className='btn btn-light'><i className="fa-solid fa-cart-shopping text-warning fa-2x"></i></Button>
+                            <Button className='btn btn-light' onClick={()=>dispatch(addToCart(product))}><i className="fa-solid fa-cart-shopping text-warning fa-2x"></i></Button>
 
                            </div>
                         </Card.Body>
